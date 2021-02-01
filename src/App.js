@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//import Accordion from "./compenents/accordion";
+import Search from './compenents/search';
 
-function App() {
+/*const items = [
+  {
+    title: "React Nedir",
+    content: "React  bir frontend javascript frameworküdür.",
+  },
+  {
+    title: "Neden React Kullanırız",
+    content: "Çünkü React geliştiricilerin favori js kütüphanesidir.",
+  },
+  {
+    title: "React Nasıl Kullanırız.",
+    content: "You use React by creating compenents.",
+  },
+];*/
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Search />
     </div>
   );
-}
+};
 
 export default App;
