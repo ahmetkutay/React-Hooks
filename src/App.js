@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React /*{ useState }*/ from "react";
 //import Accordion from "./compenents/accordion";
 //import Search from './compenents/search';
-import Dropdown from "./compenents/dropdown";
+//import Dropdown from "./compenents/dropdown";
+import Translate from "./compenents/translate";
 
 /*const items = [
   {
@@ -17,7 +18,7 @@ import Dropdown from "./compenents/dropdown";
     content: "You use React by creating compenents.",
   },
 ];*/
-
+/*
 const options = [
   {
     label: "The Color Black",
@@ -45,22 +46,11 @@ const options = [
     value: "orange",
   },
 ];
-
+*/
 const App = () => {
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
   return (
     <div>
-      <button style={{alignItems:"center"}} onClick={() => setShowDropdown(!showDropdown)}>
-        Toggle Dropdown
-      </button>
-      {showDropdown ? (
-        <Dropdown
-          selected={selected}
-          onSelectedChange={setSelected}
-          options={options}
-        />
-      ) : null}
+      <Translate />
     </div>
   );
 };
