@@ -1,10 +1,12 @@
-import React /*{ useState }*/ from "react";
-//import Accordion from "./compenents/accordion";
-//import Search from './compenents/search';
-//import Dropdown from "./compenents/dropdown";
+import React, { /*{ useState }*/ useState } from "react";
+import Accordion from "./compenents/accordion";
+import Search from "./compenents/search";
+import Dropdown from "./compenents/dropdown";
 import Translate from "./compenents/translate";
+import Route from "./compenents/route";
+import Header from "./compenents/header";
 
-/*const items = [
+const items = [
   {
     title: "React Nedir",
     content: "React  bir frontend javascript frameworküdür.",
@@ -17,8 +19,8 @@ import Translate from "./compenents/translate";
     title: "React Nasıl Kullanırız.",
     content: "You use React by creating compenents.",
   },
-];*/
-/*
+];
+
 const options = [
   {
     label: "The Color Black",
@@ -46,11 +48,29 @@ const options = [
     value: "orange",
   },
 ];
-*/
+
 const App = () => {
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div>
-      <Translate />
+      <Header />
+      <Route path="/">
+        <Accordion items={items} />
+      </Route>
+      <Route path="/list">
+        <Search />
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown
+          label="Select a color"
+          options={options}
+          selected={selected}
+          onSelectedChange={setSelected}
+        />
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
     </div>
   );
 };

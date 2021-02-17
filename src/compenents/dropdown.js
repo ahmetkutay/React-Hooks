@@ -49,9 +49,9 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
             {renderedOptions}
           </div>
         </div>
-        {/* <p style={{ color: selected.value, alignItems: "center" }}>
-          This text is {selected.value} 
-        </p>*/}
+        <p style={{ color: selected.value, alignItems: "center" }}>
+          This text is {selected.value}
+        </p>
       </div>
     </div>
   );
